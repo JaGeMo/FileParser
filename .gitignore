@@ -1,0 +1,19 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+*.dll
+*.cache
+*.log
+*.pdb
+.vs
+*.vspscc
+*.user
+bin
+obj
+packages
+TestResults
+*.DotSettings
+log_output
+publish
+*.wixobj
+WebSiteContent.wxs

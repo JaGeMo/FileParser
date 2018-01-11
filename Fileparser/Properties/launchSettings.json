@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "Fileparser": {
+      "commandName": "Project",
+      "commandLineArgs": "C:\\tmp\\test.json",
+      "environmentVariables": {
+        "outputFile": "C:\\tmp\\output.csv",
+        "inputFile": "C:\\tmp\\test.json",
+        "baseURL": "http://api.servicehub.haufe.io"
+      }
+    }
+  }
+}
