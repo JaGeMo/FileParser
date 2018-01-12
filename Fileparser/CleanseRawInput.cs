@@ -10,6 +10,7 @@ namespace Fileparser
         {
             rawStringList.RemoveAll(x => !x.Contains("{"));
             rawStringList.RemoveAll(x => !x.Contains("begin request"));
+            rawStringList.RemoveAll(x => x.Contains("\"none\""));
         }
     }
 }

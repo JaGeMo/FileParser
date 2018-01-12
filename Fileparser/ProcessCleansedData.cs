@@ -2,7 +2,6 @@
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Linq;
-using System.IO;
 
 namespace Fileparser
 {
@@ -27,14 +26,11 @@ namespace Fileparser
         public void GenerateFinaStringListPriorToOutput(ref List<LoggingJSON> jsonObjectList, ref List<string> finalListPriorToOutput)
         {
             string baseUrl = Environment.GetEnvironmentVariable("baseUrl");
+            finalListPriorToOutput.Add("time;url;vUser;iteration");
             foreach (LoggingJSON loggingObj in jsonObjectList)
             {
-                finalListPriorToOutput.Add(loggingObj.TimeStamp.Substring(11,11) + ";" + baseUrl + loggingObj.RequestPath + ";" + loggingObj.vUserKey);
+                finalListPriorToOutput.Add(loggingObj.TimeStamp.Substring(11,11) + ";" + baseUrl + loggingObj.RequestPath + ";" + loggingObj.vUserKey.Substring(24,4) + ";" + loggingObj.vUserKey.Substring(29, 8));
             }
-
-            string outputFile = Environment.GetEnvironmentVariable("outputFile");
-            if (File.Exists(outputFile)) File.Delete(outputFile);
-            File.WriteAllLines(outputFile, finalListPriorToOutput);
         }
     }   
 

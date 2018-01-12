@@ -4,7 +4,9 @@
       "commandName": "Project",
       "commandLineArgs": "C:\\tmp\\test.json",
       "environmentVariables": {
+        "inputLog": " C:\\tmp\\access.log",
         "outputFile": "C:\\tmp\\output.csv",
+        "outputLog": "C:\\tmp\\outputLog.csv",
         "inputFile": "C:\\tmp\\test.json",
         "baseURL": "http://api.servicehub.haufe.io"
       }

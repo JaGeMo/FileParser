@@ -25,5 +25,18 @@ namespace Fileparser
             return File.Exists(path); 
         }
 
+        public void FillRawAccessLog(string fileLocationName, ref List<string> rawAccessLog)
+        {
+            if (checkFileExists(fileLocationName))
+            {
+                string[] tempLog = File.ReadAllLines(fileLocationName);
+
+                foreach (string singleRawString in tempLog)
+                {
+                    rawAccessLog.Add(singleRawString);
+                }
+            }
+        }
+
     }
 }
