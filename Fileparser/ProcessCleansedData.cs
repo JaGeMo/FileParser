@@ -29,7 +29,7 @@ namespace Fileparser
             finalListPriorToOutput.Add("time;url;vUser;iteration");
             foreach (LoggingJSON loggingObj in jsonObjectList)
             {
-                finalListPriorToOutput.Add(loggingObj.TimeStamp.Substring(11,11) + ";" + baseUrl + loggingObj.RequestPath + ";" + loggingObj.vUserKey.Substring(24,4) + ";" + loggingObj.vUserKey.Substring(29, 8));
+                finalListPriorToOutput.Add(loggingObj.TimeStamp.Substring(11, 8) + ";" + loggingObj.RequestPath + ";" + loggingObj.vUserKey.Substring(24, 4) + ";" + loggingObj.vUserKey.Substring(29, 8));
             }
         }
     }   
